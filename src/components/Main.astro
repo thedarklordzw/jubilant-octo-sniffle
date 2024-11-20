@@ -1,19 +1,14 @@
 ---
+import Hero from './Hero.astro'
 const allPosts = await Astro.glob('../pages/posts/*.md')
 console.log(allPosts)
 import PostComponent from './PostComponent.astro'
-
-
-
 ---
 
 
 <section class="main">
-  <section class="hero">
-    <img class="hero-img" src="https://docs.astro.build/assets/rose.webp" alt="Blog Hero">
-    <h1 class="hero__heading">Why cats may be the best pet for you!</h1>
-    <p class="hero__desc">Cats are awesome, you should know this. Really, consider getting one..</p>
-  </section>
+  <Hero />
+  <h3 class="heading-smaller">Awesome Posts</h3>
   <section class="posts">
  {allPosts.map(post => <PostComponent title={post.frontmatter.title} description={post.frontmatter.description} img={post.frontmatter.image.url} alt={post.frontmatter.image.alt}/>)}
   </section>
