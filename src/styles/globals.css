@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* 1. Use a more-intuitive box-sizing model */
+
+:root {
+  --text-color: #000;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-size: 2rem;
+
+  margin: auto;
+  place-content: center;
+
+  /* added custom font */
+  font-family: Figtree, sans-serif;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-weight: 400;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  /* REM font sizing */
+  font-size: 62.5%;
+}
+
+/* Start of component styling */
+
+.header,
+.footer {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 5rem 0;
+}
+
+.posts {
+  display: flex;
+  flex: 0.4;
+  flex-direction: column;
+
+  gap: 2.5rem;
+}
+
+img {
+  border-radius: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.button {
+  background-color: #000;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+  color: #fff;
+}
+
+/* Hero */
+
+.hero {
+  flex: 0.6;
+}
+
+.hero-img {
+  border-radius: 4rem;
+  margin-bottom: 2.5rem;
+  /* height: 60%; */
+}
+
+.hero__heading {
+  font-size: 3rem;
+}
+
+.hero__desc {
+  margin-bottom: 2rem;
+}
+
+/* posts */
+
+.post-img {
+  width: 30rem;
+  height: auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
