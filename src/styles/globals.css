@@ -5,6 +5,7 @@
 :root {
   --text-color: #403233;
   --background-color: #f3dfc1;
+  --contrast-color: #fc7753;
 }
 
 *,
@@ -157,6 +158,16 @@ a {
   height: 50rem;
   width: 100%;
   object-fit: cover;
+}
+
+/* hover states */
+
+.nav__link {
+  transition: all 100ms ease-out;
+}
+
+.nav__link:hover {
+  color: var(--contrast-color);
 }
 
 .hero__heading {
